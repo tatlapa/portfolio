@@ -46,7 +46,7 @@ const Home = () => {
               voluptates.
             </Text>
           </Flex>
-          <Avatar size="9" src="src/assets/profile.jpg" radius="full" />
+          <Avatar size="9" src="@/assets/profile.jpg" radius="full" />
         </Flex>
         <Flex className="my-20 w-full max-h-[80vh] gap-2">
           <Flex
