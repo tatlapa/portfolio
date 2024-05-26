@@ -1,6 +1,8 @@
 import PropTypes from "prop-types";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 import { Card, Avatar, Box } from "@radix-ui/themes";
+import profilePicture from "@/assets/profile/profile.jpg";
+
 
 const SocialNetwork = (props) => {
   return (
@@ -10,7 +12,7 @@ const SocialNetwork = (props) => {
         className={`${props.className} flex gap-6 items-center justify-center`}
       >
         <Box className="relative">
-          <Avatar src="src/assets/profile.jpg" radius="full"></Avatar>
+          <Avatar src={profilePicture} radius="full"></Avatar>
           <props.IconComponent className="absolute bottom-0 right-0"/>
         </Box>
         <div>{props.content}</div>

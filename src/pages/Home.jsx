@@ -14,11 +14,12 @@ import SocialNetwork from "../components/SocialNetwork.jsx";
 import Skill from "../components/Skill.jsx";
 import Experience from "../components/Experience.jsx";
 import Project from "../components/Project.jsx";
-import datas from "../datas/data.json";
-import profilePicture from "@/assets/profile.jpg";
-import reactIcon from "@/assets/react.svg";
-import nextIcon from "@/assets/next.svg";
-import tailwindIcon from "@/assets/tailwind.svg";
+import profilePicture from "@/assets/profile/profile.jpg";
+import reactIcon from "@/assets/stack/react.svg";
+import nextIcon from "@/assets/stack/next.svg";
+import tailwindIcon from "@/assets/stack/tailwind.svg";
+import getProject from "../utils/image-util.jsx";
+import getDatas from "../datas/data.jsx";
 
 const Home = () => {
   const [appearance, setAppearance] = useState("dark");
@@ -28,6 +29,8 @@ const Home = () => {
       prevAppearance === "dark" ? "light" : "dark"
     );
   };
+
+  const datas = getDatas();
 
   return (
     <Theme
@@ -66,7 +69,8 @@ const Home = () => {
               {datas.map((project) => (
                 <Project
                   key={project.id}
-                  icon={project.icon}
+                  icon={getProject(project.icon)}
+                  iconPreview={getProject(project.iconPreview)}
                   title={project.title}
                   description={project.description}
                   url={project.url}
@@ -82,19 +86,19 @@ const Home = () => {
                   <Heading>Experiences</Heading>
                 </Flex>
                 <Experience
-                  image="src/assets/profile.jpg"
+                  image={profilePicture}
                   title="Formation REACT"
                   role="React Programmer"
                   date="Sep 2023 - Aujourd'hui"
                 />
                 <Experience
-                  image="src/assets/profile.jpg"
+                  image={profilePicture}
                   title="DR.METH"
                   role="Javascript Programmer"
                   date="Juin 2023 - Juil 2023"
                 />
                 <Experience
-                  image="src/assets/profile.jpg"
+                  image={profilePicture}
                   title="Henri Mondor Hospital"
                   role="Computer Network Technician"
                   date="Déc 2020 - Juin 2022"
