@@ -15,6 +15,10 @@ import Skill from "../components/Skill.jsx";
 import Experience from "../components/Experience.jsx";
 import Project from "../components/Project.jsx";
 import datas from "../datas/data.json";
+import profilePicture from "@/assets/profile.jpg";
+import reactIcon from "@/assets/react.svg";
+import nextIcon from "@/assets/next.svg";
+import tailwindIcon from "@/assets/tailwind.svg";
 
 const Home = () => {
   const [appearance, setAppearance] = useState("dark");
@@ -24,6 +28,7 @@ const Home = () => {
       prevAppearance === "dark" ? "light" : "dark"
     );
   };
+
   return (
     <Theme
       accentColor="sky"
@@ -46,7 +51,7 @@ const Home = () => {
               voluptates.
             </Text>
           </Flex>
-          <Avatar size="9" src="@/assets/profile.jpg" radius="full" />
+          <Avatar size="9" src={profilePicture} radius="full" />
         </Flex>
         <Flex className="my-20 w-full max-h-[80vh] gap-2">
           <Flex
@@ -65,7 +70,6 @@ const Home = () => {
                   title={project.title}
                   description={project.description}
                   url={project.url}
-                  fdp={project.fdp}
                 />
               ))}
             </Flex>
@@ -121,19 +125,19 @@ const Home = () => {
         <Flex className="mt-16">
           <Skill
             content="React"
-            logo="src/assets/react.svg"
+            logo={reactIcon}
             textContent="Ma librairie principal est React"
             className="border-r-2"
           />
           <Skill
             content="Next"
-            logo="src/assets/next.svg"
+            logo={nextIcon}
             textContent="Mon framework principal pour React est Next"
             className="border-r-2"
           />
           <Skill
             content="Tailwind"
-            logo="src/assets/tailwind.svg"
+            logo={tailwindIcon}
             textContent="Ma librairie de style est Tailwind, je peux créer des sites web rapidement en utilisant cette technologie"
             className=""
           />

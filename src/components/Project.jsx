@@ -11,6 +11,7 @@ import {
 import PropTypes from "prop-types";
 
 const Project = (props) => {
+
   return (
     <>
       <HoverCard.Root>
@@ -18,11 +19,7 @@ const Project = (props) => {
           <Card asChild key={props.id} className="overflow-visible">
             <a href={props.url} className="rounded-xl flex gap-5">
               <Flex align={"center"}>
-                <Avatar
-                  src={props.icon}
-                  radius="large"
-                  className="border-1 px-1"
-                />
+                <Avatar src={props.icon} radius="large" className="border-1 px-1" />
               </Flex>
               <Flex direction="column">
                 <Heading>{props.title}</Heading>
