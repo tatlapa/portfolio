@@ -6,7 +6,7 @@ const Skill = (props) => {
     <>
       <Box
         align="center"
-        className={`${props.className} w-1/3 px-8 flex flex-col gap-8 items-center`}
+        className={`${props.className} w-1/3 px-8 flex flex-col max-md:flex-row gap-8 items-center`}
       >
         <img src={props.logo} className="w-1/2 h-32" />
         <Heading align="center">{props.content}</Heading>

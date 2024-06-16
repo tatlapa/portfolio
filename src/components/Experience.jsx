@@ -8,7 +8,7 @@ const Experience = (props) => {
         <Flex align="center" gap="5">
           <Avatar src={props.image} radius="full" />
           <Flex direction="column">
-            <Heading className="text-xl">{props.title}</Heading>
+            <Heading as="h2" className="text-xl">{props.title}</Heading>
             <Text>{props.role}</Text>
             <p>{props.date}</p>
           </Flex>
