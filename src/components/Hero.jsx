@@ -13,16 +13,12 @@ const Hero = (props) => {
           I love creating website on React and Next, I am a Front-End Developer.
           Living in
           <Badge className="inline-flex ml-1">
-            <Avatar
-              className="w-5 h-auto"
-              radius="none"
-              src={props.country}
-            ></Avatar>
+            <Avatar className="w-5 h-auto" radius="none" src={props.country} />
             <Text size="3">Phuket</Text>
           </Badge>
         </Text>
       </Flex>
-      <div className="m-auto">
+      <div className="max-md:mt-5 m-auto">
         <Avatar
           className="max-md:w-32 max-md:h-32 w-96 h-96"
           src={props.profilePicture}

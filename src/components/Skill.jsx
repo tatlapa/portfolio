@@ -5,10 +5,9 @@ const Skill = (props) => {
   return (
     <>
       <Box
-        align="center"
-        className={`${props.className} w-1/3 px-8 flex flex-col max-md:flex-row gap-8 items-center`}
+        className={`${props.className} max-md:w-full w-1/3 max-md:px-0 px-8 flex flex-col gap-2 max-md:items-start max-md:text-start text-center items-center`}
       >
-        <img src={props.logo} className="w-1/2 h-32" />
+        <img src={props.logo} className="max-md:w-16 max-md:h-16 h-32" />
         <Heading align="center">{props.content}</Heading>
         <Text>{props.textContent}</Text>
       </Box>

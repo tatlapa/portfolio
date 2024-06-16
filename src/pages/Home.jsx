@@ -48,10 +48,16 @@ const Home = () => {
         appearance={appearance}
         IconComponent={CodeIcon}
       />
-      <Flex direction="column" className="justify-center max-md:my-12 max-md:mx-4 my-20 mx-36">
+      <Flex
+        direction="column"
+        className="justify-center max-md:my-12 max-md:mx-4 my-20 mx-36"
+      >
         <Hero profilePicture={profilePicture} country={thailandPicture} />
-        <Flex className="my-20 w-full gap-2 max-md:flex-col">
-          <Flex direction="column" className="max-md:w-full w-2/3 h-fit border-1 rounded-2xl gap-3">
+        <Flex className="my-20 w-full max-md:gap-8 gap-2 max-md:flex-col">
+          <Flex
+            direction="column"
+            className="max-md:w-full w-2/3 h-fit border-1 rounded-2xl gap-3"
+          >
             <Flex className="items-center gap-3">
               <ArchiveIcon className="w-8 h-8" />
               <Heading as="h2">Projects</Heading>
@@ -119,23 +125,23 @@ const Home = () => {
           Skills
         </Heading>
         <Text>I love working on</Text>
-        <Flex className="mt-16 max-md:flex-col">
+        <Flex className="mt-16 max-md:flex-col max-md:gap-12">
           <Skill
             content="React"
             logo={reactIcon}
-            textContent="My main library is React"
-            className="max-md:border-b-2 border-r-2"
+            textContent="My main library is React, It allows me to create websites quickly and efficiently"
+            className="max-md:border-none border-r-2"
           />
           <Skill
             content="Next"
             logo={nextIcon}
             textContent="My main framework for React is Next"
-            className="max-md:border-b-2 border-r-2"
+            className="max-md:border-none border-r-2"
           />
           <Skill
             content="Tailwind"
             logo={tailwindIcon}
-            textContent="My styling library is Tailwind; I can create websites quickly using this technology"
+            textContent="My styling library is Tailwind I can create websites quickly using this technology"
             className=""
           />
         </Flex>
