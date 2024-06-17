@@ -1,4 +1,4 @@
-import { Theme, Text, Heading, Flex } from "@radix-ui/themes";
+import { Theme, Text, Heading, Flex, Box } from "@radix-ui/themes";
 import {
   LinkedInLogoIcon,
   DiscordLogoIcon,
@@ -23,6 +23,7 @@ import tailwindIcon from "@/assets/stack/tailwind.svg";
 import getProject from "../utils/image-util.jsx";
 import getDatas from "../datas/data.jsx";
 import Hero from "../components/Hero.jsx";
+import BlurCircle from "../components/BlurCircle.jsx";
 
 const Home = () => {
   const [appearance, setAppearance] = useState("dark");
@@ -48,9 +49,11 @@ const Home = () => {
         appearance={appearance}
         IconComponent={CodeIcon}
       />
+      <Box className="max-md:my-12 max-md:mx-4 my-20 mx-36 relative z-10">
+      <BlurCircle />
       <Flex
         direction="column"
-        className="justify-center max-md:my-12 max-md:mx-4 my-20 mx-36"
+        className="justify-center relative"
       >
         <Hero profilePicture={profilePicture} country={thailandPicture} />
         <Flex className="my-20 w-full max-md:gap-8 gap-2 max-md:flex-col">
@@ -173,6 +176,7 @@ const Home = () => {
           />
         </Flex>
       </Flex>
+      </Box>
       <Footer />
     </Theme>
   );
