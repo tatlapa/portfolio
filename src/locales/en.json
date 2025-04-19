@@ -1,0 +1,86 @@
+{
+  "projects": "Projects",
+  "experiences": "Experiences",
+  "follow_me": "Follow Me",
+  "skills": "Skills",
+  "skills_sub": "I love working on",
+  "contact": "Contact",
+  "contact_sub": "I would love to work with you",
+  "independent": "Independent",
+  "web_dev": "Web Developer",
+  "react_course": "React training program",
+  "react_dev": "React Developer",
+  "hospital": "Henri Mondor Hospital",
+  "network_tech": "Computer Network Technician",
+  "dates": {
+    "indep": "October 2023 - Today",
+    "react": "Sep 2023 - October 2024",
+    "hospital": "Dec 2020 - Jun 2022"
+  },
+  "name": "Jérémy Richard",
+  "job_title": "Full-Stack Developer",
+  "bio": "I build modern websites and apps with React, Vue, Laravel, and Tailwind. I turn concepts into reliable, elegant, and user-friendly digital solutions.",
+  "based_in": "Currently based in",
+  "location": "Phuket",
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "projects_data": {
+    "1": {
+      "title": "MySupplement",
+      "description": "Smart assistant recommending dietary supplements. Developed with Nuxt.js & Laravel, using GPT-4, Stripe, Amazon API, and a full admin dashboard."
+    },
+    "2": {
+      "title": "MyScent",
+      "description": "AI-powered platform to create personalized perfumes. Built with Laravel & Vue.js, using OpenAI to generate custom scent compositions."
+    },
+    "3": {
+      "title": "Kasa",
+      "description": "React Sass website for vacation accommodation listings."
+    },
+    "4": {
+      "title": "Les Petits Plats",
+      "description": "Recipe search site built with vanilla JavaScript."
+    },
+    "5": {
+      "title": "Fish Eye",
+      "description": "Photography platform connecting clients and photographers."
+    },
+    "6": {
+      "title": "Ohmyfood",
+      "description": "Restaurant menu showcase in HTML/CSS."
+    },
+    "7": {
+      "title": "Booki",
+      "description": "Accommodation listing site made with HTML/CSS."
+    }
+  },
+  "skills_data": {
+    "1": {
+      "title": "React",
+      "description": "React is my go-to library for building user interfaces. It enables fast, component-based development."
+    },
+    "2": {
+      "title": "Next",
+      "description": "Next.js is my main React framework. It simplifies routing and server-side rendering for better performance."
+    },
+    "3": {
+      "title": "Tailwind",
+      "description": "Tailwind CSS helps me build modern, responsive UIs rapidly with utility-first classes."
+    },
+    "4": {
+      "title": "Vue",
+      "description": "Vue.js is a progressive framework I use for building performant and reactive interfaces."
+    },
+    "5": {
+      "title": "Laravel",
+      "description": "Laravel is my favorite PHP backend framework. I use it to build robust APIs and full-stack applications."
+    },
+    "6": {
+      "title": "TypeScript",
+      "description": "TypeScript adds static typing to JavaScript. It makes my code more robust and easier to maintain."
+    }
+  }
+}

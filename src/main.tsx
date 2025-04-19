@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./pages/Home.js";
+import "./i18n";
 
 const router = createBrowserRouter([
   {

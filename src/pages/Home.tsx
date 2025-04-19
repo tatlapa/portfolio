@@ -1,16 +1,16 @@
-import Header from "../layouts/Header.tsx";
-import Footer from "../layouts/Footer.tsx";
-import "../index.css";
-import SocialNetwork from "../components/SocialNetwork.tsx";
-import Skill from "../components/Skill.tsx";
-import Experience from "../components/Experience.tsx";
-import Project from "../components/Project.tsx";
+import Header from "@/layouts/Header.tsx";
+import Footer from "@/layouts/Footer.tsx";
+import "@/index.css";
+import SocialNetwork from "@/components/SocialNetwork.tsx";
+import Skill from "@/components/Skill.tsx";
+import Experience from "@/components/Experience.tsx";
+import Project from "@/components/Project.tsx";
 import profilePicture from "@/assets/hero/profile3.jpeg";
 import thailandPicture from "@/assets/hero/thailand.webp";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import getProjects from "../datas/projects.ts";
-import getSkills from "../datas/skills.ts";
-import Hero from "../components/Hero.tsx";
+import getProjects from "@/datas/projects.ts";
+import getSkills from "@/datas/skills.ts";
+import Hero from "@/components/Hero.tsx";
 import {
   RxArchive,
   RxBackpack,
@@ -19,29 +19,34 @@ import {
   RxEnvelopeClosed,
 } from "react-icons/rx";
 import { SiMalt } from "react-icons/si";
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
   const projects = getProjects();
   const skills = getSkills();
+  const { t } = useTranslation();
 
   return (
     <div className="text-foreground min-h-screen">
       <Header IconComponent={RxCode} />
       <div className="max-md:my-12 max-md:mx-4 my-20 mx-36 relative z-10">
-        <div className="flex flex-col justify-center relative">
+        <div className="flex flex-col justify-center relative" id="about">
           <Hero profilePicture={profilePicture} country={thailandPicture} />
-          <div className="my-20 w-full max-md:gap-8 gap-2 max-md:flex-col flex">
+          <div
+            className="my-20 w-full max-md:gap-8 gap-2 max-md:flex-col flex"
+            id="projects"
+          >
             <div className="max-md:w-full w-2/3 h-fit border rounded-2xl gap-3 p-4">
               <div className="flex items-center gap-3 mb-4">
                 <RxArchive className="w-8 h-8" />
-                <h2 className="text-2xl font-semibold">Projects</h2>
+                <h2 className="text-2xl font-semibold">{t("projects")}</h2>
               </div>
               <div className="flex flex-col gap-2 h-[600px] overflow-scroll overflow-x-visible">
                 {projects.map((project) => (
                   <Project
                     key={project.id}
-                    title={project.title}
-                    description={project.description}
+                    titleKey={project.titleKey}
+                    descriptionKey={project.descriptionKey}
                     url={project.url}
                     image={project.image}
                   />
@@ -53,30 +58,32 @@ const Home = () => {
                 <div className="gap-3 w-full">
                   <div className="flex items-center gap-2 mb-3">
                     <RxBackpack className="w-8 h-8" />
-                    <h2 className="text-2xl font-semibold">Experiences</h2>
+                    <h2 className="text-2xl font-semibold">
+                      {t("experiences")}
+                    </h2>
                   </div>
                   <div className="flex flex-col gap-3">
                     <Experience
-                      title="Independent"
-                      role="Web Developer"
-                      date="October 2023 - Today"
+                      title={t("independent")}
+                      role={t("web_dev")}
+                      date={t("dates.indep")}
                     />
                     <Experience
-                      title="React training program"
-                      role="React Programmer"
-                      date="Sep 2023 - October 2024"
+                      title={t("react_course")}
+                      role={t("react_dev")}
+                      date={t("dates.react")}
                     />
                     <Experience
-                      title="Henri Mondor Hospital"
-                      role="Computer Network Technician"
-                      date="Déc 2020 - Juin 2022"
+                      title={t("hospital")}
+                      role={t("network_tech")}
+                      date={t("dates.hospital")}
                     />
                   </div>
                 </div>
               </div>
               <Card>
                 <CardHeader>
-                  <CardTitle>Follow Me</CardTitle>
+                  <CardTitle>{t("follow_me")}</CardTitle>
                 </CardHeader>
                 <CardContent className="flex gap-3">
                   <SocialNetwork
@@ -94,20 +101,25 @@ const Home = () => {
               </Card>
             </div>
           </div>
-          <h2 className="text-5xl font-bold">Skills</h2>
-          <p>I love working on</p>
+
+          <h2 className="text-5xl font-bold">{t("skills")}</h2>
+          <p>{t("skills_sub")}</p>
           <div className="mt-16 max-md:flex-col max-md:gap-12 grid md:grid-cols-3 gap-12">
             {skills.map((skill) => (
               <Skill
                 logo={skill.logo}
                 key={skill.id}
-                title={skill.title}
-                description={skill.description}
+                titleKey={skill.titleKey}
+                descriptionKey={skill.descriptionKey}
+                invertOnDark={skill.invertOnDark}
               />
             ))}
           </div>
-          <h2 className="mt-16 text-3xl font-semibold">Contact</h2>
-          <p>I would love to work with you</p>
+
+          <h2 className="mt-16 text-3xl font-semibold" id="contact">
+            {t("contact")}
+          </h2>
+          <p>{t("contact_sub")}</p>
           <div className="gap-3 text-center mt-8 max-md:flex-col flex">
             <SocialNetwork
               content="Linkedin"

@@ -8,45 +8,45 @@ import tsIcon from "@/assets/stack/typescript.svg";
 const skills = [
   {
     id: 1,
-    title: "React",
+    titleKey: "skills_data.1.title",
+    descriptionKey: "skills_data.1.description",
     logo: reactIcon,
-    description:
-      "React is my go-to library for building user interfaces. It enables fast, component-based development.",
+    invertOnDark: false,
   },
   {
     id: 2,
-    title: "Next",
+    titleKey: "skills_data.2.title",
+    descriptionKey: "skills_data.2.description",
     logo: nextIcon,
-    description:
-      "Next.js is my main React framework. It simplifies routing and server-side rendering for better performance.",
+    invertOnDark: true,
   },
   {
     id: 3,
-    title: "Tailwind",
+    titleKey: "skills_data.3.title",
+    descriptionKey: "skills_data.3.description",
     logo: tailwindIcon,
-    description:
-      "Tailwind CSS helps me build modern, responsive UIs rapidly with utility-first classes.",
+    invertOnDark: false,
   },
   {
     id: 4,
-    title: "Vue",
+    titleKey: "skills_data.4.title",
+    descriptionKey: "skills_data.4.description",
     logo: vueIcon,
-    description:
-      "Vue.js is a progressive framework I use for building performant and reactive interfaces.",
+    invertOnDark: false,
   },
   {
     id: 5,
-    title: "Laravel",
+    titleKey: "skills_data.5.title",
+    descriptionKey: "skills_data.5.description",
     logo: laravelIcon,
-    description:
-      "Laravel is my favorite PHP backend framework. I use it to build robust APIs and full-stack applications.",
+    invertOnDark: true,
   },
   {
     id: 6,
-    title: "TypeScript",
+    titleKey: "skills_data.6.title",
+    descriptionKey: "skills_data.6.description",
     logo: tsIcon,
-    description:
-      "TypeScript adds static typing to JavaScript. It makes my code more robust and easier to maintain.",
+    invertOnDark: true,
   },
 ];
 
