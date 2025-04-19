@@ -8,7 +8,7 @@ type ModeProps = {
 
 const Mode = ({ toggleAppearance, appearance }: ModeProps) => {
   return (
-    <Button onClick={toggleAppearance} variant="outline" size="icon">
+    <Button onClick={toggleAppearance} size="icon">
       {appearance === "dark" ? <RxMoon /> : <RxSun />}
     </Button>
   );
