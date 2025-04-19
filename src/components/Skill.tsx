@@ -1,20 +1,17 @@
 type SkillProps = {
-  content: string
-  className?: string
-  logo: string
-  textContent: string
-}
+  title: string;
+  logo: string;
+  description: string;
+};
 
-const Skill = ({ content, className, logo, textContent }: SkillProps) => {
+const Skill = ({ title, logo, description }: SkillProps) => {
   return (
-    <div
-      className={`${className} max-md:w-full w-1/3 max-md:px-0 px-8 flex flex-col gap-2 max-md:items-start max-md:text-start text-center items-center`}
-    >
+    <div className="flex flex-col gap-2">
       <img src={logo} className="max-md:w-16 max-md:h-16 h-32" />
-      <h3 className="text-xl font-semibold">{content}</h3>
-      <p>{textContent}</p>
+      <h3 className="text-xl font-semibold">{title}</h3>
+      <p>{description}</p>
     </div>
-  )
-}
+  );
+};
 
-export default Skill
+export default Skill;

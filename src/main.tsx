@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ThemeProvider } from "@/components/theme-provider";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Home from "./pages/Home.js";
@@ -13,9 +14,11 @@ const router = createBrowserRouter([
 const Main = () => {
   return (
     <React.StrictMode>
-      <RouterProvider router={router} />
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <RouterProvider router={router} />
+      </ThemeProvider>
     </React.StrictMode>
   );
 };
 
-ReactDOM.createRoot(document.getElementById("root")).render(<Main />);
+ReactDOM.createRoot(document.getElementById("root")!).render(<Main />);
