@@ -37,22 +37,26 @@
       "description": "AI-powered platform to create personalized perfumes. Built with Laravel & Vue.js, using OpenAI to generate custom scent compositions."
     },
     "3": {
+      "title": "WakfuCrafter",
+      "description": "Nuxt 3 site allowing you to view and filter items from Ankama's Wakfu game."
+    },
+    "4": {
       "title": "Kasa",
       "description": "React Sass website for vacation accommodation listings."
     },
-    "4": {
+    "5": {
       "title": "Les Petits Plats",
       "description": "Recipe search site built with vanilla JavaScript."
     },
-    "5": {
+    "6": {
       "title": "Fish Eye",
       "description": "Photography platform connecting clients and photographers."
     },
-    "6": {
+    "7": {
       "title": "Ohmyfood",
       "description": "Restaurant menu showcase in HTML/CSS."
     },
-    "7": {
+    "8": {
       "title": "Booki",
       "description": "Accommodation listing site made with HTML/CSS."
     }

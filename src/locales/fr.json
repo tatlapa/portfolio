@@ -37,22 +37,26 @@
       "description": "Plateforme alimentée par l'IA pour créer des parfums personnalisés. Conçue avec Laravel et Vue.js, générant des compositions olfactives via OpenAI."
     },
     "3": {
+      "title": "WakfuCrafter",
+      "description": "Site en Nuxt 3 permettant de voir et filtrer les items du jeu Wakfu d'Ankama."
+    },
+    "4": {
       "title": "Kasa",
       "description": "Site React Sass permettant de consulter des hébergements pour les vacances."
     },
-    "4": {
+    "5": {
       "title": "Les Petits Plats",
       "description": "Site en JavaScript vanilla permettant de rechercher des recettes en fonction des ingrédients disponibles dans le frigo."
     },
-    "5": {
+    "6": {
       "title": "Fish Eye",
       "description": "Plateforme photographique en JavaScript vanilla mettant en relation photographes et clients."
     },
-    "6": {
+    "7": {
       "title": "Ohmyfood",
       "description": "Site HTML/CSS permettant de visualiser les menus de restaurants."
     },
-    "7": {
+    "8": {
       "title": "Booki",
       "description": "Site HTML/CSS permettant de consulter des hébergements pour les vacances."
     }
