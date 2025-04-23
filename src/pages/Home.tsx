@@ -17,6 +17,7 @@ import {
   RxCode,
   RxLinkedinLogo,
   RxEnvelopeClosed,
+  RxGithubLogo,
 } from "react-icons/rx";
 import { SiMalt } from "react-icons/si";
 import { useTranslation } from "react-i18next";
@@ -78,12 +79,11 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="border rounded-2xl p-4">
               <Card>
                 <CardHeader>
                   <CardTitle>{t("follow_me")}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex gap-3">
+                <CardContent className="flex gap-1">
                   <SocialNetwork
                     content="Linkedin"
                     IconComponent={RxLinkedinLogo}
@@ -95,9 +95,13 @@ const Home = () => {
                     href="https://www.malt.fr/profile/jeremyrichard1?overview"
                     iconClassName="size-10"
                   />
+                  <SocialNetwork
+                    content="Github"
+                    IconComponent={RxGithubLogo}
+                    href="https://github.com/tatlapa"
+                  />
                 </CardContent>
               </Card>
-            </div>
           </div>
         </div>
 
@@ -130,6 +134,11 @@ const Home = () => {
             IconComponent={SiMalt}
             href="https://www.malt.fr/profile/jeremyrichard1?overview"
             iconClassName="size-10"
+          />
+          <SocialNetwork
+            content="Github"
+            IconComponent={RxGithubLogo}
+            href="https://github.com/tatlapa"
           />
           <SocialNetwork
             content="Mail"
