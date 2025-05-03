@@ -11,7 +11,7 @@ const MobileMenu = () => {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden">
+        <Button variant="ghost" size="sm" className="md:hidden">
           {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </Button>
       </SheetTrigger>

@@ -15,9 +15,10 @@ const LanguageSwitcher = () => {
   return (
     <Button
       onClick={toggleLanguage}
-      className="flex items-center gap-2 text-sm"
+      size="sm"
+      className="md:h-9 md:px-4 has-[>svg]:px-3"
     >
-      <GlobeIcon className="w-4 h-4" />
+      <GlobeIcon />
       {targetLanguage}
     </Button>
   );

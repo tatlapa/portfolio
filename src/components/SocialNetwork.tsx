@@ -6,6 +6,7 @@ type SocialNetworkProps = {
   href: string;
   IconComponent: React.ElementType;
   iconClassName?: string;
+  buttonClassName?: string;
 };
 
 const SocialNetwork: FC<SocialNetworkProps> = ({
@@ -13,10 +14,11 @@ const SocialNetwork: FC<SocialNetworkProps> = ({
   href,
   IconComponent,
   iconClassName = "",
+  buttonClassName = "",
 }) => {
   return (
     <a href={href}>
-      <Button className="flex items-center justify-center gap-2">
+      <Button className={buttonClassName}>
         <IconComponent className={iconClassName} />
         {content}
       </Button>

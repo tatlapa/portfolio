@@ -11,8 +11,8 @@ const Header = ({ IconComponent }: HeaderProps) => {
   const { t } = useTranslation();
 
   return (
-    <header className="flex justify-between bg-[#111A27] max-md:px-4 max-md:py-4 px-36 py-6 items-center border-b border-[#1B537B]">
-      <h1 className="text-white items-center flex gap-2 max-md:text-sm text-lg font-semibold">
+    <header className="flex items-center justify-between bg-[#111A27] px-4 py-4 md:px-36 md:py-6 border-b border-[#1B537B]">
+      <h1 className="text-white items-center flex gap-1 md:gap-2 text-sm md:text-lg font-semibold">
         <IconComponent className="max-md:w-4 max-md:h-4 w-8 h-8" />
         jeremyrichard.fr
       </h1>
@@ -33,7 +33,7 @@ const Header = ({ IconComponent }: HeaderProps) => {
       </ul>
 
       {/* Menu Mobile */}
-      <div className="md:hidden flex items-center gap-2">
+      <div className="md:hidden flex items-center gap-1 md:gap-2">
         <ModeToggle />
         <LanguageSwitcher />
         <MobileMenu />
