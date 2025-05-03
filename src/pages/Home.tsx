@@ -19,6 +19,7 @@ import {
   RxEnvelopeClosed,
   RxGithubLogo,
 } from "react-icons/rx";
+import { BsWhatsapp } from "react-icons/bs";
 import { SiMalt } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
@@ -138,9 +139,9 @@ const Home = () => {
             buttonClassName="w-full md:w-fit"
           />
           <SocialNetwork
-            content="Github"
-            IconComponent={RxGithubLogo}
-            href="https://github.com/tatlapa"
+            content="Whatsapp"
+            IconComponent={BsWhatsapp}
+            href="https://api.whatsapp.com/send?phone=33650533782"
             buttonClassName="w-full md:w-fit"
           />
           <SocialNetwork
