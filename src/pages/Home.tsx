@@ -19,8 +19,7 @@ import {
   RxEnvelopeClosed,
   RxGithubLogo,
 } from "react-icons/rx";
-import { BsWhatsapp } from "react-icons/bs";
-import { SiMalt } from "react-icons/si";
+import { SiMalt, SiWhatsapp } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
@@ -140,7 +139,7 @@ const Home = () => {
           />
           <SocialNetwork
             content="Whatsapp"
-            IconComponent={BsWhatsapp}
+            IconComponent={SiWhatsapp}
             href="https://api.whatsapp.com/send?phone=33650533782"
             buttonClassName="w-full md:w-fit"
           />
