@@ -19,7 +19,7 @@ import {
   RxEnvelopeClosed,
   RxGithubLogo,
 } from "react-icons/rx";
-import { SiMalt } from "react-icons/si";
+import { SiMalt, SiWhatsapp } from "react-icons/si";
 import { useTranslation } from "react-i18next";
 
 const Home = () => {
@@ -83,7 +83,7 @@ const Home = () => {
                 <CardHeader>
                   <CardTitle>{t("follow_me")}</CardTitle>
                 </CardHeader>
-                <CardContent className="flex gap-1">
+                <CardContent className="flex gap-0.75 md:gap-2">
                   <SocialNetwork
                     content="Linkedin"
                     IconComponent={RxLinkedinLogo}
@@ -123,27 +123,31 @@ const Home = () => {
           {t("contact")}
         </h2>
         <p>{t("contact_sub")}</p>
-        <div className="gap-3 text-center mt-8 max-md:flex-col flex">
+        <div className="mt-8 grid grid-cols-2 gap-2 md:gap-3 md:flex">
           <SocialNetwork
             content="Linkedin"
             href="https://www.linkedin.com/in/jeremy-richard-webdev"
             IconComponent={RxLinkedinLogo}
+            buttonClassName="w-full md:w-fit"
           />
           <SocialNetwork
             content="Malt"
             IconComponent={SiMalt}
             href="https://www.malt.fr/profile/jeremyrichard1?overview"
             iconClassName="size-10"
+            buttonClassName="w-full md:w-fit"
           />
           <SocialNetwork
-            content="Github"
-            IconComponent={RxGithubLogo}
-            href="https://github.com/tatlapa"
+            content="Whatsapp"
+            IconComponent={SiWhatsapp}
+            href="https://api.whatsapp.com/send?phone=33650533782"
+            buttonClassName="w-full md:w-fit"
           />
           <SocialNetwork
             content="Mail"
             href="mailto:jeremyrc77.pro@gmail.com"
             IconComponent={RxEnvelopeClosed}
+            buttonClassName="w-full md:w-fit"
           />
         </div>
       </div>
