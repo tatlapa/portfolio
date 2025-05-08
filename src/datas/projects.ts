@@ -11,7 +11,7 @@ const projects = [
   {
     titleKey: "projects_data.1.title",
     descriptionKey: "projects_data.1.description",
-    url: "https://mysupplement.ai/",
+    url: "https://mysupplement.netlify.app/",
     image: mysupplementPreview,
     id: 1,
   },
