@@ -17,7 +17,7 @@ const SocialNetwork: FC<SocialNetworkProps> = ({
   buttonClassName = "",
 }) => {
   return (
-    <a href={href}>
+    <a className="flex items-center" href={href}>
       <Button className={buttonClassName}>
         <IconComponent className={iconClassName} />
         {content}

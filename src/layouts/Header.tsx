@@ -11,17 +11,14 @@ const Header = ({ IconComponent }: HeaderProps) => {
   const { t } = useTranslation();
 
   return (
-    <header className="flex items-center justify-between bg-[#111A27] px-4 py-4 md:px-36 md:py-6 border-b border-[#1B537B]">
+    <header className="flex items-center justify-between bg-[#111A27] px-4 py-4 md:px-24 lg:px-36 md:py-6 border-b border-[#1B537B]">
       <h1 className="text-white items-center flex gap-1 md:gap-2 text-sm md:text-lg font-semibold">
-        <IconComponent className="max-md:w-4 max-md:h-4 w-8 h-8" />
+        <IconComponent className="w-4 h-4 md:w-8 md:h-8" />
         jeremyrichard.fr
       </h1>
 
       {/* Menu Desktop */}
       <ul className="hidden md:flex gap-5 items-center text-white text-sm">
-        <li>
-          <a href="#about">{t("nav.about")}</a>
-        </li>
         <li>
           <a href="#projects">{t("nav.projects")}</a>
         </li>

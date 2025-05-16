@@ -17,9 +17,6 @@ const MobileMenu = () => {
       </SheetTrigger>
       <SheetContent side="right" className="w-64 p-6">
         <nav className="flex flex-col gap-6 mt-6">
-          <a href="#about" onClick={() => setOpen(false)}>
-            {t("nav.about")}
-          </a>
           <a href="#projects" onClick={() => setOpen(false)}>
             {t("nav.projects")}
           </a>

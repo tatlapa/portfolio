@@ -28,15 +28,15 @@ const Home = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="text-foreground min-h-screen">
+    <>
       <Header IconComponent={RxCode} />
-      <div className="max-md:my-12 max-md:mx-4 my-20 mx-36">
+      <div className="my-12 mx-4 lg:my-20 lg:mx-36 md:mx-24">
         <Hero profilePicture={profilePicture} country={thailandPicture} />
         <div
-          className="my-20 w-full max-md:gap-8 gap-2 max-md:flex-col flex"
+          className="my-20 w-full gap-8 md:gap-2 flex flex-col md:flex-row"
           id="projects"
         >
-          <div className="max-md:w-full w-2/3 border rounded-2xl gap-3 p-4">
+          <div className="md:w-2/3 border rounded-2xl gap-3 p-4">
             <div className="flex items-center gap-3 mb-4">
               <RxArchive className="w-8 h-8" />
               <h2 className="text-2xl font-semibold">{t("projects")}</h2>
@@ -53,7 +53,7 @@ const Home = () => {
               ))}
             </div>
           </div>
-          <div className="max-md:w-full w-1/3 gap-3 flex flex-col">
+          <div className="md:w-1/3 gap-3 flex flex-col">
             <div className="border rounded-2xl p-4">
               <div className="gap-3 w-full ">
                 <div className="flex items-center gap-2 mb-3">
@@ -79,35 +79,38 @@ const Home = () => {
                 </div>
               </div>
             </div>
-              <Card>
-                <CardHeader>
-                  <CardTitle>{t("follow_me")}</CardTitle>
-                </CardHeader>
-                <CardContent className="flex gap-0.75 md:gap-2">
-                  <SocialNetwork
-                    content="Linkedin"
-                    IconComponent={RxLinkedinLogo}
-                    href="https://www.linkedin.com/in/jeremy-richard-webdev"
-                  />
-                  <SocialNetwork
-                    content="Malt"
-                    IconComponent={SiMalt}
-                    href="https://www.malt.fr/profile/jeremyrichard1?overview"
-                    iconClassName="size-10"
-                  />
-                  <SocialNetwork
-                    content="Github"
-                    IconComponent={RxGithubLogo}
-                    href="https://github.com/tatlapa"
-                  />
-                </CardContent>
-              </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>{t("follow_me")}</CardTitle>
+              </CardHeader>
+              <CardContent className="grid grid-cols-2 gap-1">
+                <SocialNetwork
+                  content="Linkedin"
+                  IconComponent={RxLinkedinLogo}
+                  href="https://www.linkedin.com/in/jeremy-richard-webdev"
+                  buttonClassName="gap-1 w-full"
+                />
+                <SocialNetwork
+                  content="Malt"
+                  IconComponent={SiMalt}
+                  href="https://www.malt.fr/profile/jeremyrichard1?overview"
+                  iconClassName="size-10"
+                  buttonClassName="gap-1 w-full"
+                />
+                <SocialNetwork
+                  content="Github"
+                  IconComponent={RxGithubLogo}
+                  href="https://github.com/tatlapa"
+                  buttonClassName="gap-1 w-full"
+                />
+              </CardContent>
+            </Card>
           </div>
         </div>
 
         <h2 className="text-5xl font-bold">{t("skills")}</h2>
         <p>{t("skills_sub")}</p>
-        <div className="mt-16 max-md:flex-col max-md:gap-12 grid md:grid-cols-3 gap-12">
+        <div className="mt-16 grid md:grid-cols-3 gap-8 md:gap-12">
           {skills.map((skill) => (
             <Skill
               logo={skill.logo}
@@ -152,7 +155,7 @@ const Home = () => {
         </div>
       </div>
       <Footer />
-    </div>
+    </>
   );
 };
 

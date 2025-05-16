@@ -31,7 +31,7 @@ const Project: FC<ProjectProps> = ({
     <HoverCard>
       <HoverCardTrigger>
         <a href={url} target="_blank" rel="noopener noreferrer">
-          <Card className="shadow-md transition-transform hover:-translate-y-1">
+          <Card className="shadow-md hover:border-muted-foreground/70">
             <CardHeader>
               <CardTitle>{t(titleKey)}</CardTitle>
               <CardDescription>{t(descriptionKey)}</CardDescription>
